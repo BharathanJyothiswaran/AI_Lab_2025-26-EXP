@@ -13,10 +13,18 @@ To  write  a logic program for finding the factorial of given number using SWI-P
 
 ### Program:
 
+fact(N,Result):-
+    N>1,
+    N1 is N-1,
+    fact(N1,Res),
+    Result is N*R
+fact(0,1).
+fact(1,1).
 
 
 ### Output:
 
+<img width="705" height="175" alt="image" src="https://github.com/user-attachments/assets/12a73493-cde5-4980-a37c-3174cf7f9ad8" />
 
 
 ### Result:
