@@ -16,18 +16,38 @@ Write a Alpha beta pruning algorithm to find the optimal value of MAX Player fro
 
 ### Program:
 
-
-
-
-
-
-
-
-
-
+ import math
+def alpha_beta_pruning(depth, node_index, is_maximizing, values, alpha,
+beta):
+if depth == 3:
+return values[node_index]
+if is_maximizing:
+best = -math.inf
+for i in range(2):
+val = alpha_beta_pruning(depth + 1, node_index * 2 + i,
+False, values, alpha, beta)
+best = max(best, val)
+alpha = max(alpha, best)
+if beta <= alpha:
+break
+return best
+else:
+best = math.inf
+for i in range(2):
+val = alpha_beta_pruning(depth + 1, node_index * 2 + i,
+True, values, alpha, beta)
+best = min(best, val)
+beta = min(beta, best)
+if beta <= alpha:
+break
+return best
+values = [3, 5, 6, 9, 1, 2, 0, -1]
+result = alpha_beta_pruning(0, 0, True, values, -math.inf, math.inf)
+print("The Optimal value is: ", result)
 
 ### Output:
 
+<img width="755" height="104" alt="image" src="https://github.com/user-attachments/assets/ea321bdf-70af-4c58-a2f9-48c61fd9bdce" />
 
 
 ### Result:
