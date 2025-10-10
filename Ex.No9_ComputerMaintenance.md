@@ -1,6 +1,6 @@
 # Ex.No: 9  Logic Programming –  Computer Maintenance Expert System
 ### DATE:                                                                            
-### REGISTER NUMBER : 
+### REGISTER NUMBER : 212222060026
 ### AIM: 
 Write a Prolog program to build a computer maintenance expert system.
 ###  Algorithm:
@@ -15,18 +15,81 @@ Write a Prolog program to build a computer maintenance expert system.
      
 ### Program:
 
+diagnose(printer_head, 'Check printer head: printing problem with
 
+missing dots and non-uniform printing.') :-
 
+Preview Code Blame Raw
 
+symptom(printing_problem),
 
+symptom(missing_dots),
 
+symptom(no_uniform_printing).
 
+diagnose(ribbon, 'Ribbon issue: not printing, missing dots, and spread
 
+inks.') :-
 
+symptom(not_printing),
 
+symptom(missing_dots),
+
+symptom(spread_inks).
+
+diagnose(paper_stuck_in_printer, 'Paper stuck or out of paper: not
+
+printing, paper jam and out of paper.') :-
+
+symptom(not_printing),
+
+symptom(paper_jam),
+
+symptom(out_of_paper).
+
+diagnose(scanner_cable, 'Scanner cable issue: scanner not detected and
+
+loose connection.') :-
+
+symptom(scanner_not_detected),
+
+symptom(loose_connection).
+
+diagnose(keyboard_fault, 'Keyboard issue: not responding and LED not
+
+blinking.') :-
+
+symptom(keyboard_not_responding),
+
+symptom(led_not_blinking).
+
+symptom(printing_problem).
+
+symptom(missing_dots).
+
+symptom(no_uniform_printing).
+
+start :-
+
+writeln('--- Welcome to the Computer Maintenance Expert System ---
+
+'),
+
+( diagnose(Fault, What) ->
+
+format('Diagnosis: Fault = ~w~nExplanation: ~w~n', [Fault,
+
+What])
+
+;
+
+writeln('No fault matched the current symptoms.')
+
+).
 
 ### Output:
 
+<img width="796" height="218" alt="image" src="https://github.com/user-attachments/assets/adc8ea7a-6244-455a-81c3-b2e2ddac0374" />
 
 
 ### Result:
