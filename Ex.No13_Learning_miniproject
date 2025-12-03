@@ -74,7 +74,7 @@ x_train, x_test, y_train, y_test= train_test_split(x,y)
 #scale data
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
-x_train_scaled = scaler.fit_transform(x_train)
+x_train_scaled = scaler.fit_transform(x_train) 
 x_test_scaled = scaler.fit_transform(x_test)
 ```
 ```
