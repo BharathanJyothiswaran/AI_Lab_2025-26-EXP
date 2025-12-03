@@ -7,7 +7,7 @@ To write a program to train the classifier for Diabetes Prediction.
 1. Start the program.
 2. Import required Python libraries, including NumPy, Pandas, Google Colab, Gradio, and various
 scikit-learn modules.
-3. Mount Google Drive using Google Colab's 'drive.mount()' method to access the data file
+3. Mount Google Drive using Google Colab's 'drive.mount()' method to access the data file 
 located in Google Drive.
 4. Install the Gradio library using 'pip install gradio'.
 5. Load the diabetes dataset from a CSV file ('diabetes.csv') using Pandas.
